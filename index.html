@@ -40,7 +40,7 @@
   <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
 </svg>
 
-<a href=”#” title=”Search for flights”></a>
+<a href="/" title="Search - for flights"></a>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <polyline points="9 6 15 12 9 18" />
@@ -53,7 +53,8 @@
   <path d="M3 7v11m0 -4h18m0 4v-8a2 2 0 0 0 -2 -2h-8v6" />
   <circle cx="7" cy="10" r="1" />
 </svg>
-<a href=”#” title=”Search for Hotels”></a>
+
+<a href="/" title="Search - for Hotels"></a>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <polyline points="9 6 15 12 9 18" />
@@ -69,7 +70,7 @@
   <line x1="8" y1="7" x2="6" y2="12" />
 </svg>
 
-<a href=”#” title=”Search for Activities”></a>
+<a href="/" title="Search - for Activities"></a>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <polyline points="9 6 15 12 9 18" />
@@ -81,7 +82,8 @@
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />
 </svg>
-<a href=”#” title=”Search for Restaurants”></a>
+
+<a href="/" title="Search - for Restaurants"></a>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <polyline points="9 6 15 12 9 18" />
@@ -95,27 +97,26 @@
 <h2>Testimonials</h2>
 <section>
 <h3>Miranda Blake</h3>
-<img src="images/miranda-blake.png"
-alt="woman smiling" />
+<img src="images/miranda-blake.png" alt="woman smiling">
 <p>Traveling From: London, England</p>
 <blockquote>“I traveled here for business, but my stay was extended. Now it is my home.”</blockquote>
 </section>
 <section>
 <h3>Max Winter</h3>
 
-<img src="images/max-winter.png" alt="man smiling" />
+<img src="images/max-winter.png" alt="man smiling">
 <p>From: Berlin, Germany</p>
 <blockquote>“Great escape from my reality. Beautiful sunsets, wonderful people, great beer. ”</blockquote>
 </section>
 <section>
 <h3>Inés Villegoes</h3>
-<img src="images/ines-villegoes.png" />
+<img src="images/ines-villegoes.png" alt="woman frowning">
 <p>Traveling From: Barcelona, Spain</p>
 <blockquote>“A very safe environment for all travelers.”</blockquote>
 </section>
 <section>
 <h3>Carmen Lorenzo</h3>
-<img src="images/carmen-lorenzo.png" />
+<img src="images/carmen-lorenzo.png" alt="woman looking serious">
 <p>Traveling From: Madrid, Spain</p>
 <blockquote>“Live, laugh, love-- everything you need in Majorca.”</blockquote>
 </section>
@@ -171,22 +172,48 @@ alt="woman smiling" />
 <section>
 <h2>Contact Us</h2>
 <form>
-First Name (Enter first name)
-Last Name (Enter last name)
-
-Contact Method (Email, Text, Phone)
-Email Address (Enter Email)
-Phone Number (Enter telephone number)
-
-Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-Travel Time (Fall, Winter, Spring, Summer, Flexible)
+  <label for="fname">First Name</label><br>
+  <input type="text" name="fname" id="fname" autocomplete="name" aria-required="true" value="Enter first name"><br>
+  <label for="lname">Last Name</label><br>
+  <input type="text" name="lname" id="lname" autocomplete="name" aria-required="true" value="Enter last name"><br>
+  <fieldset>
+    <legend>Contact Methond</legend>
+    <input type="radio" name="email" value="email">
+    <label for="email">Email</label>
+    <input type="radio" name="text" value="phone">
+    <label for="phone">Text</label>
+    <input type="radio" name="phone" value="phone">
+    <label for="phone">Phone</label> 
+    </fieldset>
+    <label for="email">Email</label>
+				<input type="email"  name="email" id="email" autocomplete="email" aria-required="true">
+				<label for="phone">Phone</label>
+				<input type="tel" name="phone" id="phone" autocomplete="tel" aria-required="true">
+    <label for="city">Destination</label>
+				<select id="city" name="select">
+          <option value="1">Barcelona</option>
+          <option value="2">Granada</option>
+          <option value="3">Ibiza</option>
+          <option value="4">Madrid</option>
+          <option value="5">Majorca</option>
+          <option value="6">Seville</option>
+          <option value="7">Tenerife</option>
+          <option value="7">Valencia</option>
+        </select>
+        <label for="season">Travel Time</label>
+				<select id="season" name="select">
+          <option value="1">Fall</option>
+          <option value="2">Winter</option>
+          <option value="3">Spring</option>
+          <option value="4">Summer</option>
+          <option value="5">Flexible</option>
+        </select>
+        <input type="submit" name="submit" value="submit">
 </form>
 </section>
 </main>
-<footer>
-Copyright 2021 Wunderlust
-Privacy Statement
-Terms of Service
-</footer>
+  <footer>
+		<p>Copyright &copy; 2021 Wunderlust Privacy Statement Terms of Service</p>
+	</footer>
 </body>
 </html>
